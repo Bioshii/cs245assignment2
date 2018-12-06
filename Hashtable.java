@@ -2,9 +2,6 @@ import static java.lang.Math.abs;
 
 public class Hashtable <k,v> {
 
-	public Hashtable(int newSize) {
-	}
-
 	// Data will be held in nodes
 	class HashNode <k,v> {
 		public k key;
@@ -29,9 +26,9 @@ public class Hashtable <k,v> {
 	}
 
 
-	public Hashtable(int newSize, int itemCount) {
+	public Hashtable(int newSize) {
 		this.buckets = new HashNode[newSize]; // When growing the array, you will have to change the size
-		this.size = itemCount; // Amount of items in structure 
+		this.size = 0; // Amount of items in structure
 		this.num_buckets = newSize; // Keep this the same as array length
 	}
 
